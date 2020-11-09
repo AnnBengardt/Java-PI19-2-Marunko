@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Test {
     public static void main(String[] args){
         Sedan car1 = new Sedan("Black", 250, "manual", 1000);
@@ -12,5 +14,17 @@ public class Test {
         gar.add(car2);
         gar.add(car3);
         gar.get_by_amount();
+        TempConverter tempConverter = new TempConverter(22, "C");
+        System.out.println("");
+        System.out.println(tempConverter.convertCtoF());
+        System.out.println(tempConverter.convertCtoK());
+        System.out.println(tempConverter.convertFtoC());
+        int[] values = {1, 4, 6, 7, 9, 14, 19, 21};
+        Recursion recursion = new Recursion();
+        System.out.println(recursion.printNumbers(7));
+        System.out.println(recursion.forSearch(14, values));
+        System.out.println(recursion.binarySearch(values, 6, 0, 7));
+        recursion.compareSpeed(560001);
+        System.out.println(recursion.solver(0, 10));
     }
 }
